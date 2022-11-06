@@ -1,76 +1,80 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     user-select: none;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 25px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
 }
 
-.calculator{
+.calculator {
     position: relative;
     background: black;
-    width: 563px;
-    height: 1218px;
+    width: 350px;
+    height: 600px;
     border-radius: 50px;
     padding: 20px;
     color: white;
+    justify-content: center;
 }
 
-.top-container{
+.top-container {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    height: 250px;
+    height: 50px;
 }
 
-.display{
-    font-size: 130px;
-    font-weight: 300;
+.display {
+    font-size: 50px;
+    font-weight: 100;
     margin-bottom: 20px;
-    height: 158px;
+    height: 80px;
     text-align: right;
     margin-right: 20px;
 }
 
-.buttons-container{
+.buttons-container {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 7px;
 }
 
-.button{
+.button {
     background: #333;
     border-radius: 50%;
-    font-size: 45px;
+    font-size: 35px;
     cursor: pointer;
-    height: 110px;
-    width: 110px;
+    height: 73px;
+    width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: filter .3s;
 }
 
-.button.function{
+.button.function {
     color: black;
     background: #a5a5a5;
 }
 
-.button.operator{
+.button.operator {
     background: #f1a33c;
 }
 
-.button.number-0{
-    width: 250px;
+.button.number-0 {
+    width: 140px;
     border-radius: 55px;
     justify-content: flex-start;
-    padding-left: 43px;
+    padding-left: 60px;
     grid-column-start: 1;
     grid-column-end: 3;
     /* another grid column styling of this component
@@ -78,17 +82,16 @@ body{
 }
 
 .button:active,
-.button:focus{
+.button:focus {
     filter: brightness(120%);
 }
 
-.bottom{
+.bottom {
     width: 200px;
     height: 5px;
     background: white;
     border-radius: 4px;
     position: absolute;
     bottom: 10px;
-    left: 30%;
+    left: 20%;
 }
-
